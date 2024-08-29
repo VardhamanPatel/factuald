@@ -121,19 +121,6 @@ const ProductDetails = () => {
             Visit Website
           </button>
         </section>
-
-        <section className="py-12 text-center bg-gray-900 text-white">
-          <h2 className="text-3xl font-semibold">Ready to get started?</h2>
-          <p className="mt-4 text-lg">Let's discuss your project</p>
-          <div className="flex justify-center gap-8 mt-8">
-            <button className="px-6 py-2 bg-gray-700 text-white rounded-full">
-              Get in Touch
-            </button>
-            <button className="px-6 py-2 bg-blue-600 text-white rounded-full">
-              See Next Project
-            </button>
-          </div>
-        </section>
       </div>
 
       {modalImage && <ImageModal image={modalImage} onClose={closeModal} />}

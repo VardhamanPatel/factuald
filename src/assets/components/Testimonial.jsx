@@ -41,7 +41,7 @@ export function Testimonial() {
   return (
     <section data-scroll data-scroll-speed='0.1' className="bg-gradient-to-br from-gray-100 to-gray-200 py-16 px-4 sm:px-8 lg:px-16 relative rounded-2xl m-2">
       <div className="max-w-7xl mx-auto">
-      <h1 className="text-8xl font-bold mb-4 uppercase">Testimonial</h1>
+      <h1 className="text-4xl md:text-6xl lg:text-8xl font-bold mb-4 uppercase">Testimonial</h1>
         <hr className="mb-10 border-black border-1" />
 
         {/* Testimonials Container */}
@@ -56,9 +56,9 @@ export function Testimonial() {
                 className="flex-shrink-0 w-full lg:h-[70vh] flex flex-col md:flex-row items-center px-4 lg:px-12"
               >
                 {/* Profile Image */}
-                <div className="w-full lg:w-1/3 mb-6 md:mb-0 text-center md:text-left">
+                <div className="w-full mb-6 md:mb-0 text-center md:text-left">
                   <img
-                    className="h-48 w-48 rounded-full object-cover mx-auto md:mx-0 border-4 border-black shadow-lg"
+                    className="h-24 w-24 rounded-full object-cover mx-auto md:mx-0 border-4 border-black shadow-lg"
                     src={testimonial.image}
                     alt={`Profile of ${testimonial.name}`}
                   />
@@ -72,8 +72,8 @@ export function Testimonial() {
                   </div>
                 </div>
                 {/* Testimonial Content */}
-                <div className="w-full lg:w-2/3 text-center md:text-left bg-white shadow-lg p-8 rounded-lg border border-gray-300">
-                  <p className="text-2xl lg:text-3xl italic text-gray-800 leading-relaxed px-6 lg:px-12">
+                <div className="w-full lg:w-[120vw] text-center md:text-left bg-white shadow-lg p-8 rounded-lg border border-gray-300">
+                  <p className="text-lg md:text-2xl lg:text-2xl italic text-gray-800 leading-relaxed px-6 lg:px-12">
                     “{testimonial.text}”
                   </p>
                 </div>

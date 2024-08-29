@@ -36,7 +36,7 @@ function Herosec() {
                 {index === 0 && <ImageMask width="10vw" />}
                 {index === 1 && <ImageMask width="30vw" />}
                 {index === 2 && <ImageMask width="15vw" />}
-                <h1 className="text-title uppercase text-[5.5vw] leading-[5.5vw] tracking-tight font-bold text-transparent bg-clip-text bg-gradient-to-r from-zinc-200 to-zinc-500">
+                <h1 className="text-title text-5xl md:text-6xl lg:text-8xl uppercase text-[5.5vw] leading-[5.5vw] tracking-tight font-bold text-transparent bg-clip-text bg-gradient-to-r from-zinc-200 to-zinc-500">
                   {title}
                 </h1>
               </motion.div>
@@ -44,16 +44,16 @@ function Herosec() {
           ))}
         </div>
 
-        <div className="section-info border-t text-sm sm:text-md lg:text-2xl border-gray-700 mt-24  flex justify-between items-center tracking-tight  py-8 px-16">
+        <div className="section-info border-t text-lg md:text-2xl lg:text-3xl border-gray-700 mt-24  flex justify-between items-center tracking-tight  py-8 px-16">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 1, ease: 'easeInOut' }}
-            className="specialization text-gray-400 font-medium text-lg mt-2"
+            className="specialization text-gray-400 font-medium text-sm md:text-lg lg:text-xl  mt-4"
           >
             <h3 className="mb-0 ">Specialized in</h3>
-            <div className="wrapper text-md  sm:text-sm lg:text-xl  text-white font-semibold tracking-tighter space-y-6">
-              <div className="words sm:-mt-1 lg:mt-1 ">
+            <div className="wrapper  text-white font-semibold tracking-tighter space-y-6">
+              <div className="words ">
                 <span>Branding</span>
                 <span>Logo Design</span>
                 <span>Brand Visual</span>
@@ -68,7 +68,7 @@ function Herosec() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 1, ease: 'easeInOut' }}
-            className="empowerment text-gray-400 font-medium text-lg mt-2"
+            className="empowerment text-gray-400 font-medium text-sm md:text-lg lg:text-xl mt-2"
           >
             Empowering <br />
             <span className="highlighted-text text-white font-medium">Digital Products & Brands</span>
@@ -78,7 +78,7 @@ function Herosec() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6, duration: 1, ease: 'easeInOut' }}
-            className="location text-gray-400 font-medium text-lg mt-2"
+            className="location text-gray-400 font-medium text-sm md:text-lg lg:text-xl mt-2"
           >
             Location <br />
             <span className="highlighted-text text-white font-medium">Ahmedabad</span>

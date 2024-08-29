@@ -37,7 +37,7 @@ const Gallery = () => {
           <button
             key={category}
             onClick={() => handleFilter(category)}
-            className={`mx-4 px-6 md:px-10 lg:px-14 py-2 rounded-full text-sm md:text-lg font-bold transition-colors duration-300 mb-4 ${
+            className={`mx-4 px-5 md:px-10 lg:px-14 py-2 rounded-full text-sm md:text-lg font-bold transition-colors duration-300 mb-4 ${
               filter === category ? 'bg-red-500 text-white' : 'bg-gray-100 text-black hover:bg-gray-200'
             }`}
           >
