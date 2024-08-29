@@ -9,7 +9,7 @@ function ServiceSection() {
   };
 
   return (
-    <div data-scroll data-scroll-speed='0.5'>
+    <div data-scroll data-scroll-speed='0.1'>
     <motion.div
        className="w-full bg-gradient-to-b from-black p-2"
       initial={{ opacity: 0 }}

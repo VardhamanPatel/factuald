@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 // import { FaLinkedin, FaInstagram, FaDribbble, FaTumblr } from "react-icons/fa";
 
@@ -7,26 +7,64 @@ function Footer() {
     hidden: { opacity: 0, y: 30 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.7 } },
   };
-  
+  const containerRef = useRef(null);
+  const textRef = useRef(null);
+
+  useEffect(() => {
+    resizeText();
+
+    window.addEventListener("resize", resizeText);
+
+    return () => {
+      window.removeEventListener("resize", resizeText);
+    };
+  }, []);
+
+  const resizeText = () => {
+    const container = containerRef.current;
+    const text = textRef.current;
+
+    if (!container || !text) {
+      return;
+    }
+
+    const containerWidth = container.offsetWidth;
+    let min = 1;
+    let max = 2500;
+
+    while (min <= max) {
+      const mid = Math.floor((min + max) / 2);
+      text.style.fontSize = mid + "px";
+
+      if (text.offsetWidth <= containerWidth) {
+        min = mid + 1;
+      } else {
+        max = mid - 1;
+      }
+    }
+
+    text.style.fontSize = max + "px";
+  };
+
   return (
-    <footer data-scroll data-scroll-speed="0.4" className="bg-gradient-to-b from-gray-900 to-black text-gray-300 py-16 lg:py-24">
+    <footer data-scroll data-scroll-speed="-0.1" className="bg-gradient-to-b from-gray-950 to-black text-gray-300 py-16 lg:py-24">
       {/* Call to Action */}
-      <section className="w-full flex justify-center items-center  px-6 py-16">
+      <section className="w-full h-screen  flex justify-center items-center  px-6 py-16">
         <motion.div
           className="text-center"
           initial="hidden"
           animate="visible"
           variants={fadeIn}
         >
-          <h2 className="text-5xl lg:text-6xl font-extrabold leading-tight mb-8 text-white">
+          <h2 className="text-5xl lg:text-6xl font-bold leading-tight mb-20 text-white">
             Ready to Bring Your Vision to Life?
           </h2>
-          <p className="text-xl lg:text-2xl leading-relaxed mb-8 text-gray-400 max-w-3xl mx-auto">
+          <p className="text-xl lg:text-2xl leading-relaxed mb-12 text-gray-400 max-w-3xl mx-auto">
             We’re here to collaborate with you on building something extraordinary. Contact us today and let’s start designing the future together.
           </p>
           <a
             href="/contact"
-            className="inline-block bg-yellow-500 text-black py-4 px-10 rounded-full text-lg lg:text-xl font-semibold hover:bg-yellow-600 transition-all"
+            className="inline-block bg-yellow-500 text-black py-3 px-10 rounded-full text-lg lg:text-xl font-semibold hover:bg-yellow-600 transition-all"
           >
             Contact Us
           </a>
@@ -48,9 +86,7 @@ function Footer() {
             transition={{ duration: 1 }}
             className="flex flex-col justify-between"
           >
-            <h1 className="text-4xl lg:text-5xl font-extrabold mb-6 text-white">
-              Factual Design
-            </h1>
+            
             <p className="text-gray-400 text-lg leading-relaxed mb-8">
               Turning visionary ideas into stunning, impactful designs that elevate your brand.
             </p>
@@ -165,6 +201,18 @@ function Footer() {
           </motion.div>
         </div>
       </motion.div>
+      <div 
+        data-scroll data-scroll-speed="0.1"  
+        className="flex h-[20vw] w-full items-center overflow-hidden"
+        ref={containerRef}
+      >
+        <span
+          className="bottom-0 left-0 mx-auto whitespace-nowrap text-center font-bold uppercase text-white"
+          ref={textRef}
+        >
+          Factual
+        </span>
+      </div>
     </footer>
   );
 }

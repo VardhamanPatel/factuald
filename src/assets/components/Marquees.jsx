@@ -58,7 +58,7 @@ const Marquees = () => {
     ];
 
     return (
-        <div className=" h-screen bg-white p-12 m-2 rounded-3xl">
+        <div data-scroll data-scroll-speed="-0.1" className=" h-screen bg-white p-12 m-2 rounded-3xl">
              <h1 className="text-8xl font-bold mb-4 uppercase">Brands We have
              worked with</h1>
             <div className=" sticky py-20 mt-20 w-full bg-white  overflow-hidden contrast-200">
