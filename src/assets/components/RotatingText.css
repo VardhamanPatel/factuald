@@ -24,7 +24,7 @@ body {
 
 .wrapper span{
   display: block;
-  height: 120%;
+  height: 100%;
   padding-left: 2px;
   /* border: 1px solid black; */
   animation: spin_words 6s infinite;

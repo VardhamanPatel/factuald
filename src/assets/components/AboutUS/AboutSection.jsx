@@ -10,7 +10,7 @@ function AboutSection() {
     return (
         <div className="bg-black text-white">
             {/* Hero Section */}
-            <section data-scroll data-scroll-speed="-0.8" className="min-h-screen flex items-center bg-black px-12 py-24">
+            <section data-scroll data-scroll-speed="-1" className="min-h-screen flex items-center bg-black px-12 py-24">
                 <motion.div
                     className="w-full"
                     initial="hidden"

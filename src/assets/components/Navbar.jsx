@@ -92,7 +92,7 @@ const Navbar = () => {
         </Link>
       </div>
 
-      <div className="py-4 flex justify-between items-center mx-10">
+      <div className="py-4 flex justify-between items-center -mx-12 ">
 
 
         {/* Desktop Menu */}
@@ -110,7 +110,7 @@ const Navbar = () => {
         </ul>
 
         {/* Mobile Menu Toggle Button */}
-        <div className="lg:hidden flex items-center">
+        <div className="lg:hidden flex items-center ">
           <button
             aria-label="Toggle menu"
             className="w-10 h-7 flex flex-col justify-between"
@@ -120,17 +120,17 @@ const Navbar = () => {
             <motion.div
               variants={topVariants}
               animate={open ? "opened" : "closed"}
-              className="w-9 h-1 bg-white rounded origin-left"
+              className="w-9 h-0.5 bg-white rounded origin-left"
             ></motion.div>
             <motion.div
               variants={centerVariants}
               animate={open ? "opened" : "closed"}
-              className="w-9 h-1 bg-white rounded"
+              className="w-9 h-0.5 bg-white rounded"
             ></motion.div>
             <motion.div
               variants={bottomVariants}
               animate={open ? "opened" : "closed"}
-              className="w-9 h-1 bg-white rounded origin-left"
+              className="w-9 h-0.5 bg-white rounded origin-left"
             ></motion.div>
           </button>
         </div>

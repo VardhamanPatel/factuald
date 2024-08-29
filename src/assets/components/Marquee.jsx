@@ -11,7 +11,7 @@ const Marquee = ({ imagesUrl, direction }) => {
                 className="flex flex-shrink-0 gap-20 py-4 pr-24"
             >
                 {imagesUrl.map((url, index) => (
-                    <img key={index} src={url} className="w-[12vw]" />
+                    <img key={index} src={url} className="w-[30vw] sm:w-[14vw] lg:w-[12vw]" />
                 ))}
             </motion.div>
 
