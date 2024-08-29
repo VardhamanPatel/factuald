@@ -1,0 +1,47 @@
+
+body {
+ 
+  background-color: #fdfdfd;
+  color: #333;
+  text-align: center;
+  -webkit-font-smoothing: antialiased;
+}
+
+.animation-wrapper {
+  height: 32vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+
+h1 {
+  margin: 0;
+  position: relative;
+}
+
+.title-container {
+  font-weight: bold;
+  display: inline-flex;
+  margin: -5px;
+  padding: 5px;
+}
+
+.letter {
+  font-size: calc(6vw + 1rem);
+  margin-left: -1px;
+}
+
+.subtitle {
+  font-weight: normal;
+  font-size: calc(0.5vw + 0.6rem);
+  letter-spacing: calc(0.4vw + 0.6rem);
+  text-transform: uppercase;
+  position: relative;
+  top: -5px;
+}
+
+/* Initial opacity for animation */
+.letter, .subtitle {
+  opacity: 0;
+}
